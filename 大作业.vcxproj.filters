@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="codebird\student.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codeplane\planegame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codemain\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codebird\birdgame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codebird\file.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codebird\bird.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codebird\birdpillar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codebird\birdsource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codeplane\planesource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codeplane\planebase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codeplane\plane_mep.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codeplane\plane_lep.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codeplane\plane_mp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codetools\mylabel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codetools\myreact.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codetools\mycrusor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codetools\myedit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codemain\mylogin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codetools\mybutton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codemain\mycontrol.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codemain\mysignup.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codemain\myplayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="codemain\mymanager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="codeplane\planegame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codemain\mygamebase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codebird\birdgame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codetools\mydelete.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codebird\birdsource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codebird\bird.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codebird\birdpillar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codeplane\planebase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codeplane\plane_mp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codeplane\plane_mep.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codeplane\planesource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codeplane\plane_lep.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codetools\mylabel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codetools\mycrusor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codetools\myreact.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codemain\myloign.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codemain\myaccount.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codemain\myplayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codetools\myedit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codetools\mybutton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codemain\mycontrol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codemain\myenter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codemain\mysignup.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="codemain\mymanager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
