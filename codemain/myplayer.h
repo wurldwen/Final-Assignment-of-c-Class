@@ -10,10 +10,12 @@ class Player:public Account
 {
 public:
 	Player();
+	~Player();
 	int birdscore;
 	int planelevel;
 	virtual void chooseui();
 	void Show();
+	void OnEvent();
 private:
 	
 	game* g;

@@ -8,7 +8,7 @@
 #include"mygamebase.h"
 #include"myplayer.h"
 #include"mymanager.h"
-#include<fstream>
+
 
 class Entrance
 {

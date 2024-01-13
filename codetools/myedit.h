@@ -11,6 +11,9 @@ class Edit
 public:
 	enum EditType { TextEdit, PsdEdit };
 	Edit(int x, int y, int w, int h, COLORREF color);
+	void RenewText() { //text.erase(0,10);
+		text.resize(0);
+	}
 	void Show();
 	void SetEditType(EditType type);
 	bool InEdit(ExMessage msg);
@@ -19,7 +22,7 @@ public:
 private:
 	Rect rect;
 	Cursor cursor;
-	std::string text;		//存储
+	std::string text;		
 	int textw;			//文字宽度
 	bool inputState;	//是否输入
 	EditType  type;		//编辑框类型

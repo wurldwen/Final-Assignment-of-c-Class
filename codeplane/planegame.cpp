@@ -219,13 +219,13 @@ void planegame::draw()
 void planegame::update()
 {
 	//返回键返回
-	ExMessage msg;
+	/*ExMessage msg;
 	msg= getmessage();
 	if (preturnbutton->OnClickButton(msg))
 	{
 		status = choose;
 		return;
-	}
+	}*/
 	//地图移动
 	for (int i = 1; i <= chooseLevel; i++)
 	{

@@ -11,16 +11,22 @@ class Manager :public Account
 public:
 	Manager();
 	~Manager();
-	virtual void chooseui();
+	virtual void chooseui(vector<Player>& UserArray);
+	void SortUsers(int choice, vector<Player>& UserArray);// 对用户依据首字母或分数排序
+	void ManageUser(vector<Player>& UserArray);
 	void SearchUser(vector<Player>& UserArray);//查找与展示相结合（思考如何实现模糊搜索）
-	void DeleteUser(vector < Player>& UserArray);//暂未想好图形化该如何实现
-	void ShowUsers(bool isfind);//根据搜索结果确定输出格式，所有数据都输出，但第一行输出搜索的结果（待优化）
-	void Show();//显示功能按钮
+	void DeleteUser(vector<Player>& UserArray);//暂未想好图形化该如何实现
+	void ClearUser(vector<Player>& UserArray);//清空账户
+	void ShowUsers(bool isfind, vector<Player>& UserArray);//根据搜索结果确定输出格式，所有数据都输出，但第一行输出搜索的结果（待优化）
+	void OnEvent(vector<Player>& UserArray);
 private:
 	Button* pReturnButton;
-	Button* pShowButton;
-	Button* pSearchButton;
+	Button* pManageButton;
+	Button* sClearButton;
+	Button* sDeleteButton;
+	Button* sSearchButton;
 	Button* sReturnButton;  //查找时的返回按钮
+	Button* sSortButton;
 	Edit* pSearchEdit;
 };
 #endif // !MYMANAGER_H

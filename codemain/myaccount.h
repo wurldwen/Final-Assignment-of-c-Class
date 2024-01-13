@@ -14,7 +14,6 @@ public:
 	HWND hwnd;
 	string Name;
 	string PIN;
-	virtual void chooseui() = 0;
 };
 
 #endif // !MYACCOUNT_H

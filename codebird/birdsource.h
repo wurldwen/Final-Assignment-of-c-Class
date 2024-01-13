@@ -13,7 +13,7 @@
 
 class birdsource
 {
-	birdsource() {};
+	
 public:
 	static birdsource* m_s;
 	static birdsource* getsource();
@@ -22,8 +22,9 @@ public:
 	IMAGE bigBird[2];			//鸟
 	IMAGE down[2];				//朝下的柱子
 	IMAGE up[2];				//朝上的柱子
-	IMAGE end[2];				//结束动画
 	~birdsource();
+private:
+	birdsource() {}
 };
 
 
