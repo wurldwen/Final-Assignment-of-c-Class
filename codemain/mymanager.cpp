@@ -84,6 +84,7 @@ void Manager::ClearUser(vector<Player>& UserArray)
 		return;
 	}
 	ofs.close();
+	ShowUsers(false, UserArray);
 
 }
 
@@ -119,7 +120,7 @@ void Manager::OnEvent(vector<Player>& UserArray)
 			}
 			if (this->sClearButton->OnClickButton(msg))
 			{
-				this->chooseui(UserArray);
+				this->ClearUser(UserArray);
 			}
 			if (this->sSortButton->InButton(msg))
 			{
@@ -135,7 +136,7 @@ void Manager::OnEvent(vector<Player>& UserArray)
 		pSearchEdit->Show();
 		sClearButton->Show();
 		sDeleteButton->Show();
-		sReturnButton->Show();  //查找时的返回按钮
+		sReturnButton->Show(); 
 		sSortButton->Show();
 		FlushBatchDraw();
 	}
@@ -147,9 +148,10 @@ void Manager::ShowUsers(bool isfind, vector<Player>& UserArray)
 {
 	setbkmode(TRANSPARENT);
 	settextcolor(BLACK);
-	settextstyle(20, 0, "账号名");
-	outtextxy(40, 70, "飞机大战");
-	outtextxy(200, 70, "飞翔的小鸟");
+	settextstyle(20, 0, "黑体");
+	outtextxy(40, 70, "Account");
+	outtextxy(200, 70, "birdgame");
+	outtextxy(300, 70, "planegame");
 	
 	if (isfind == true)
 	{
@@ -157,16 +159,17 @@ void Manager::ShowUsers(bool isfind, vector<Player>& UserArray)
 	}
 	if (isfind == false)
 	{
-		for (int q = 0; q <= UserArray.size(); q++) {
-			string sbird= to_string(UserArray[q].birdscore);
+		for (int q = 0; q <UserArray.size(); q++)
+		{
+			string s= to_string( UserArray[q].birdscore);
 			string splane = to_string(UserArray[q].planelevel);
 			outtextxy(40, 100 + q * 20, UserArray[q].Name.c_str());
-			outtextxy(200, 100 + q * 20,sbird.c_str());
+			outtextxy(200, 100 + q * 20,s.c_str());
 			outtextxy(300, 100 + q * 20, splane.c_str());
-			//outtextxy(380, 60 + q * 20, s[q].s_Math);
+			
 		}
 	}
-}
+} 
 
 void Manager::chooseui(vector<Player>& UserArray)
 {
