@@ -14,7 +14,7 @@
 
 管理模块
 
-![管理模块](https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/8904e1d6-395c-43e6-b158-b549a55d0d9e)
+![管理模块](https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/600e3e54-e63f-42ad-88b9-d763f3ef8c1a)
 
 各个游戏关系
                                                       
