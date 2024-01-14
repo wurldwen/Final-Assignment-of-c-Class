@@ -1,5 +1,9 @@
 项目介绍：用户可以注册和登录，注册的数据将写入文件供登录使用，登录后可以选择多种游戏，并且在游戏中创造的最高纪录将保存为对应账号的数据，该项目是游戏类项目与管理系统的结合，既是对入门级游戏的扩展也是对管理系统的创新。
 
+流程图
+
+![流程图](https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/48ccedd7-c8e7-4e74-bda1-30f59c146595)
+
 概览
 
 <img width="1256" alt="项目中所有类" src="https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/153b3d7e-c69d-43be-bc1f-1c1f71992058">
