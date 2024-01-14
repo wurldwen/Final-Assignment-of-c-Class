@@ -1,13 +1,29 @@
 项目介绍：用户可以注册和登录，注册的数据将写入文件供登录使用，登录后可以选择多种游戏，并且在游戏中创造的最高纪录将保存为对应账号的数据，该项目是游戏类项目与管理系统的结合，既是对入门级游戏的扩展也是对管理系统的创新。
 
+概览
+
+<img width="1256" alt="项目中所有类" src="https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/153b3d7e-c69d-43be-bc1f-1c1f71992058">
+
 工具模块
 
 <img width="772" alt="工具模块" src="https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/fb01b37b-daa5-401f-801d-c9067896892d">
 
-飞翔的小鸟模块
+管理模块
 
-<img width="836" alt="飞翔的小鸟模块" src="https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/a3d070af-677d-48c9-b4dd-4c4a9464b984">
+![管理模块](https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/8904e1d6-395c-43e6-b158-b549a55d0d9e)
 
 各个游戏关系
                                                       
-<img width="498" alt="各个游戏之间的关系" src="https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/2c405fd4-4bd7-4cf9-9999-74f81c6221fe">
+<img width="496" alt="各个游戏之间的关系" src="https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/bc6c2fd1-1715-4402-9704-50ffa320f2dd">
+
+飞翔的小鸟模块
+
+<img width="827" alt="飞翔的小鸟模块" src="https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/e15707b4-d202-449d-932c-b50a99b34068">
+
+飞机大战模块
+
+![飞机大战模块](https://github.com/wurldwen/Final-Assignment-of-c-Class/assets/147225829/e38e57b1-0508-4c79-80c7-c12f0590f49d)
+
+
+
+
