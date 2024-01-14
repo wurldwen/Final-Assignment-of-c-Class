@@ -6,13 +6,15 @@
 class SignupWidget :public Entrance
 {
 public:
-	SignupWidget();
-	void Init(vector<Player>& UserArray);
+	SignupWidget(vector<Player>& UserArray);
+	virtual void Init();
 	~SignupWidget();
 	bool CheckAccount(Edit* UserName);
 	void Show();
-	void OnEvent(vector<Player>& UserArray);
-	void AddAccount(vector<Player>& UserArray,  Edit*UserName,Edit*UserPIN);
+	void OnEvent();
+	void AddAccount( Edit*UserName,Edit*UserPIN);
+private:
+	vector<Player>& UserArray;
 };
 #endif // !MYSIGNUP_H
 

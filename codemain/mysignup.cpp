@@ -1,6 +1,6 @@
 #include"mysignup.h"
 
-SignupWidget::SignupWidget()
+SignupWidget::SignupWidget(vector<Player>& UserArray):UserArray(UserArray)
 {
 	pUserNameEdit = new Edit(200, 100, 200, 30, RGB(204, 213, 240));					//输入用户名
 	pPasswordEdit = new Edit(200, 150, 200, 30, RGB(204, 213, 240));				//输入密码
@@ -10,7 +10,7 @@ SignupWidget::SignupWidget()
 	pEntranceButton = new Button(180, 230, 150, 35, RGB(106, 213, 245),  "注册");					//注册	
 }
 
-void SignupWidget::Init(vector<Player>& UserArray)
+void SignupWidget::Init()
 {
 	pUserNameEdit->RenewText();
 	pPasswordEdit->RenewText();
@@ -18,10 +18,10 @@ void SignupWidget::Init(vector<Player>& UserArray)
 	MoveWindow(hwnd, (screenWidth - ENTERW) / 2, (screenHeight - ENTERH) / 2, ENTERW, ENTERH, true);	//移动创建的窗口
 	setbkcolor(RGB(158, 211, 206));
 	cleardevice();
-	OnEvent(UserArray);//登录点击的按钮
+	OnEvent();//登录点击的按钮
 }
 
-void SignupWidget::AddAccount(vector<Player>& UserArray,Edit* UserName, Edit* UserPIN)
+void SignupWidget::AddAccount(Edit* UserName, Edit* UserPIN)
 {
 	/*ofstream ofs;
 	ofs.open(FILENAME, ios::out);*/
@@ -58,7 +58,7 @@ void SignupWidget::Show()
 	pEntranceButton->Show();
 }
 
-void SignupWidget::OnEvent(vector<Player>& UserArray)
+void SignupWidget::OnEvent()
 {
 	BeginBatchDraw();
 	ExMessage msg;
@@ -78,7 +78,7 @@ void SignupWidget::OnEvent(vector<Player>& UserArray)
 					}
 					else
 					{
-						AddAccount(UserArray, pUserNameEdit, pPasswordEdit);
+						AddAccount(pUserNameEdit, pPasswordEdit);
 					    MessageBox(hwnd, "注册成功", "提示", MB_OK);
 					}
 					return;

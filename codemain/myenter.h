@@ -21,6 +21,6 @@ protected:
 	HWND hwnd;
 public:
 	virtual~Entrance() {}
-	virtual void Init(vector<Player>& UserArray)=0;
+	virtual void Init()=0;
 };
 #endif // !MYENTER_H

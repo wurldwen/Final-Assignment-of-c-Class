@@ -13,6 +13,7 @@ public:
 	birdgame(int&max);
 	const int getScore()const { return score; }
 	virtual void playing();
+	virtual int getRecord()const;
 	~birdgame();
 private:
 	birdsource* s;
@@ -25,6 +26,7 @@ private:
 	void update();
 	void drawPillar(Pillar pillar);
 	static int score;
+	int maxscore;
 };
 
 #endif // !BIRDGAME_H

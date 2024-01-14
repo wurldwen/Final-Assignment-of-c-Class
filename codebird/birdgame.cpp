@@ -33,6 +33,11 @@ void birdgame::drawPillar(Pillar pillar)
 	lCurScore->Show(5, 30);
 }
 
+int birdgame::getRecord()const
+{
+	return maxscore;
+}
+
 void birdgame::update()
 {
 	//实现游戏越来越快功能

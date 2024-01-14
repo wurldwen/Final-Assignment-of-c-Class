@@ -2,8 +2,8 @@
 Control::Control()
 {
 	UserArray.clear();
-	tsignup = new SignupWidget;
-	tlogin = new LoginWidget;
+	tsignup = new SignupWidget(UserArray);
+	tlogin = new LoginWidget(UserArray);
 	pSignupButton = new Button(100, 50, 300, 50, RGB(106, 213, 245), "×¢²á");
 	pLoginButton = new Button(100, 150, 300, 50, RGB(106, 213, 245), "µÇÂ¼");
 	pExitButton = new Button(100, 250, 300, 50, RGB(106, 213, 245), "ÍË³ö");
@@ -26,7 +26,7 @@ Control::Control()
 	while (1)
 	{
 		tenter = Enter();
-		tenter->Init(UserArray);
+		tenter->Init();
 	}
 }
 

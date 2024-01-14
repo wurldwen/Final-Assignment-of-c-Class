@@ -377,6 +377,11 @@ void planegame::update()
 	}
 }
 
+int planegame::getRecord()const
+{
+	return chooseLevel;
+}
+
 void planegame::playing()
 {
 	hwnd=initgraph(WIDTH, HEIGHT);

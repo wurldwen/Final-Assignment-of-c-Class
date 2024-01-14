@@ -1,11 +1,11 @@
 #include"mymanager.h"
-Manager::Manager()
+Manager::Manager(vector<Player>& UserArray):UserArray(UserArray)
 {
 	this->pManageButton = new Button(100, 100, 300, 50,RGB(106, 213, 245), "管理员工");
 	this->pReturnButton = new Button(100, 200, 300, 50, RGB(106, 213, 245), "返回");
 }
 
-void Manager::ManageUser(vector<Player>& UserArray)
+void Manager::ManageUser()
 {
 	this->sReturnButton = new Button(5, 5, 50, 25, RGB(106, 213, 245), "返回");
 	this->sSortButton = new Button(100, 5, 50, 25, RGB(106, 213, 245), "排序");
@@ -18,7 +18,7 @@ void Manager::ManageUser(vector<Player>& UserArray)
 	MoveWindow(hwnd, (screenWidth - 800) / 2, (screenHeight - 800) / 2, 800, 800, true);
 	setbkcolor(RGB(204, 213, 240));
 	cleardevice();
-	OnEvent(UserArray);
+	OnEvent();
 
 	delete sClearButton;
 	delete sDeleteButton;
@@ -28,7 +28,7 @@ void Manager::ManageUser(vector<Player>& UserArray)
 	delete pSearchEdit;
 }
 
-void Manager::DeleteUser(vector<Player>& UserArray)
+void Manager::DeleteUser()
 {
 	for (int i=0;i<UserArray.size();i++)
 	{
@@ -56,7 +56,7 @@ void Manager::DeleteUser(vector<Player>& UserArray)
 	ofs.close();
 }
 
-void Manager::SearchUser(vector<Player>& UserArray)
+void Manager::SearchUser()
 {
 	bool isfind = 0;
 	for (vector<Player>::iterator it = UserArray.begin(); it != UserArray.end(); it++)
@@ -64,18 +64,18 @@ void Manager::SearchUser(vector<Player>& UserArray)
 		if (it->Name == pSearchEdit->GetText())
 		{
 			isfind = 1;
-			ShowUsers(isfind,UserArray);
+			ShowUsers(isfind);
 		}
 	}
 
 	if (!isfind)
 	{
 		MessageBox(hwnd, "搜索结果不存在", "提示", MB_OK);
-		ShowUsers(isfind,UserArray);
+		ShowUsers(isfind);
 	}
 }
 
-void Manager::ClearUser(vector<Player>& UserArray)
+void Manager::ClearUser()
 {
 	UserArray.resize(0);
 	ofstream ofs(FILENAME, ios::trunc);
@@ -84,24 +84,24 @@ void Manager::ClearUser(vector<Player>& UserArray)
 		return;
 	}
 	ofs.close();
-	ShowUsers(false, UserArray);
+	ShowUsers(false);
 
 }
 
-void Manager::SortUsers(int choice, vector<Player>& UserArray)
+void Manager::SortUsers(int choice)
 {
 	switch(choice)
 	{
 	case 1:
 	{
 
-		ShowUsers(false, UserArray);
+		ShowUsers(false);
 	}
 		break;
 	}
 }
 
-void Manager::OnEvent(vector<Player>& UserArray)
+void Manager::OnEvent()
 {
 	BeginBatchDraw();
 	ExMessage msg;
@@ -112,26 +112,26 @@ void Manager::OnEvent(vector<Player>& UserArray)
 			pSearchEdit->OnEvent(msg);
 			if (sSearchButton->OnClickButton(msg))
 			{
-				SearchUser(UserArray);
+				SearchUser();
 			}
 			if (this->sDeleteButton->OnClickButton(msg))
 			{
-				this->DeleteUser(UserArray);
+				this->DeleteUser();
 			}
 			if (this->sClearButton->OnClickButton(msg))
 			{
-				this->ClearUser(UserArray);
+				this->ClearUser();
 			}
 			if (this->sSortButton->InButton(msg))
 			{
-				this->SortUsers(1, UserArray);
+				this->SortUsers(1);
 			}
 			if (this->sReturnButton->OnClickButton(msg))
 			{
 				return;
 			}
 		}
-		this->ShowUsers(false, UserArray);
+		this->ShowUsers(false);
 		sSearchButton->Show();
 		pSearchEdit->Show();
 		sClearButton->Show();
@@ -144,7 +144,7 @@ void Manager::OnEvent(vector<Player>& UserArray)
 
 }
 
-void Manager::ShowUsers(bool isfind, vector<Player>& UserArray)
+void Manager::ShowUsers(bool isfind)
 {
 	setbkmode(TRANSPARENT);
 	settextcolor(BLACK);
@@ -171,7 +171,7 @@ void Manager::ShowUsers(bool isfind, vector<Player>& UserArray)
 	}
 } 
 
-void Manager::chooseui(vector<Player>& UserArray)
+void Manager::chooseui()
 {
 	hwnd = initgraph(ENTERW, ENTERH);
 	MoveWindow(hwnd, (screenWidth - ENTERW) / 2, (screenHeight - ENTERH) / 2, ENTERW, ENTERH, true);
@@ -185,8 +185,8 @@ void Manager::chooseui(vector<Player>& UserArray)
 		{
 			if (pManageButton->OnClickButton(msg))
 			{
-				ManageUser(UserArray);
-				chooseui(UserArray);
+				ManageUser();
+				chooseui();
 			}
 
 			if (pReturnButton->OnClickButton(msg))

@@ -7,13 +7,14 @@
 class LoginWidget:public Entrance
 {
 public:
-	LoginWidget();
-	void Init(vector<Player>& UserArray);
+	LoginWidget(vector<Player>& UserArray);
+	void Init();
 	~LoginWidget();
 	void Show();
-	void OnEvent(vector<Player>& UserArray);
+	void OnEvent();
     bool CheckAccount( Edit* UserName, Edit* UserPIN);
 private:
+	vector<Player>& UserArray;
 	Manager manager;
 };
 

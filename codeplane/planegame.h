@@ -26,9 +26,11 @@ class planegame :public game
 public:
 	planegame(int&level);
 	virtual void playing();
+	virtual int getRecord ()const;
 	const int getLevel()const { return chooseLevel; }
 	~planegame();
 private:
+	
 	planesource* s;
 	myPlane* myPlane = new class myPlane();
 	std::vector<Back1>back1;
@@ -37,10 +39,9 @@ private:
 	std::vector<MiddleEnemy>middleEnemy1;
 	std::vector<MiddleEnemy>middleEnemy2;
 	
-
-	
 	Button* pReturnButton;
 	Button* preturnbutton;
+	int chooseLevel;				    //可供选择的最高关卡
 	int gameLevel;					    //选择哪个关卡
 	int status;                         //游戏进行的状态
 	int existEnemy;                     //现存敌机种类

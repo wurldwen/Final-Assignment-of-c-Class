@@ -34,7 +34,7 @@ void Player::OnEvent()
 			{
 				g = new planegame(planelevel);
 				g->playing();
-				planelevel = g->chooseLevel;
+				planelevel = g->getRecord();
 				//更新飞机游戏达到的最高关卡
 				chooseui();
 				delete g;
@@ -43,7 +43,7 @@ void Player::OnEvent()
 			{
 				g = new birdgame(birdscore);//更新飞翔的小鸟最高分
 				g->playing();
-				birdscore = g->maxscore;
+				birdscore = g->getRecord();
 				chooseui();
 				delete g;
 			}

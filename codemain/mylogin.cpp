@@ -1,7 +1,7 @@
 #include"myloign.h"
 
-LoginWidget::LoginWidget()
-{
+LoginWidget::LoginWidget(vector<Player>& UserArray):UserArray(UserArray),manager(UserArray)
+{                                                          
 	pUserNameEdit = new Edit(200, 100, 200, 30, RGB(204, 213, 240));				//输入用户名
 	pPasswordEdit = new Edit(200, 150, 200, 30, RGB(204, 213, 240));				//输入密码
 	pPasswordEdit->SetEditType(Edit::PsdEdit);									//设置当前编辑框为不可见
@@ -10,7 +10,7 @@ LoginWidget::LoginWidget()
 	pEntranceButton = new Button(180, 230, 150, 35, RGB(106, 213, 245), "登录");					//登录		
 }
 
-void LoginWidget::Init(vector<Player>& UserArray)
+void LoginWidget::Init()
 {
 	pUserNameEdit->RenewText();
 	pPasswordEdit->RenewText();
@@ -18,7 +18,7 @@ void LoginWidget::Init(vector<Player>& UserArray)
 	MoveWindow(hwnd, (screenWidth - ENTERW) / 2, (screenHeight - ENTERH) / 2, ENTERW, ENTERH, true);
 	setbkcolor(RGB(158, 211, 206));
 	cleardevice();																		//登录点击的按钮
-	OnEvent(UserArray);
+	OnEvent();
 }
 
 LoginWidget::~LoginWidget()
@@ -40,7 +40,7 @@ void LoginWidget::Show()
 	pEntranceButton->Show();
 }
 
-void LoginWidget::OnEvent(vector<Player>& UserArray)
+void LoginWidget::OnEvent()
 {
 	BeginBatchDraw();
 	ExMessage msg;
@@ -65,7 +65,7 @@ void LoginWidget::OnEvent(vector<Player>& UserArray)
 				//管理员登录入口
 				else if (pUserNameEdit->GetText() == "wurld" && pPasswordEdit->GetText() == "wenyang")
 				{
-					manager.chooseui(UserArray);
+					manager.chooseui();
 					return;
 				}
 				else
