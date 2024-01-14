@@ -75,7 +75,7 @@ void Manager::SearchUser()
 	}
 }
 
-void Manager::ClearUser()
+void Manager::ClearUsers()
 {
 	UserArray.resize(0);
 	ofstream ofs(FILENAME, ios::trunc);
@@ -120,7 +120,7 @@ void Manager::OnEvent()
 			}
 			if (this->sClearButton->OnClickButton(msg))
 			{
-				this->ClearUser();
+				this->ClearUsers();
 			}
 			if (this->sSortButton->InButton(msg))
 			{

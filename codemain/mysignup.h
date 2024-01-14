@@ -9,12 +9,13 @@ public:
 	SignupWidget(vector<Player>& UserArray);
 	virtual void Init();
 	~SignupWidget();
+	
+private:
+	vector<Player>& UserArray;
 	bool CheckAccount(Edit* UserName);
 	void Show();
 	void OnEvent();
 	void AddAccount( Edit*UserName,Edit*UserPIN);
-private:
-	vector<Player>& UserArray;
 };
 #endif // !MYSIGNUP_H
 

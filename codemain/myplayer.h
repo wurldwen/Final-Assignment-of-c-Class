@@ -13,11 +13,12 @@ public:
 	~Player();
 	int birdscore;
 	int planelevel;
-	virtual void chooseui();
+	void chooseui();
+	
+private:
 	void Show();
 	void OnEvent();
-private:
-	
+
 	game* g;
 	
 	Button* pPlanegameButton;	    

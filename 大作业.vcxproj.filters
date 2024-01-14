@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="codebird\student.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="codeplane\planegame.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -25,9 +22,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="codebird\birdgame.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="codebird\file.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="codebird\bird.cpp">
@@ -158,5 +152,8 @@
     <ClInclude Include="codemain\mymanager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

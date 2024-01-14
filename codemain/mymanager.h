@@ -23,13 +23,6 @@ public:
 	Manager(vector<Player>& UserArray);
 	~Manager();
 	virtual void chooseui();
-	void SortUsers(int choice);// 对用户依据首字母或分数排序
-	void ManageUser();
-	void SearchUser();//查找与展示相结合（思考如何实现模糊搜索）
-	void DeleteUser();//暂未想好图形化该如何实现
-	void ClearUser();//清空账户
-	void ShowUsers(bool isfind);//根据搜索结果确定输出格式，所有数据都输出，但第一行输出搜索的结果（待优化）
-	void OnEvent();
 private:
 	vector<Player>& UserArray;
 	Button* pReturnButton;
@@ -40,6 +33,13 @@ private:
 	Button* sReturnButton;  //查找时的返回按钮
 	Button* sSortButton;
 	Edit* pSearchEdit;
+	void SortUsers(int choice);// 对用户依据首字母或分数排序
+	void ManageUser();
+	void SearchUser();//查找与展示相结合（思考如何实现模糊搜索）
+	void DeleteUser();//暂未想好图形化该如何实现
+	void ClearUsers();//清空账户
+	void ShowUsers(bool isfind);//根据搜索结果确定输出格式，所有数据都输出，但第一行输出搜索的结果（待优化）
+	void OnEvent();
 };
 #endif // !MYMANAGER_H
 

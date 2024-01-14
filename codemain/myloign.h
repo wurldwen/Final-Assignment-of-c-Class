@@ -10,12 +10,13 @@ public:
 	LoginWidget(vector<Player>& UserArray);
 	void Init();
 	~LoginWidget();
-	void Show();
-	void OnEvent();
-    bool CheckAccount( Edit* UserName, Edit* UserPIN);
+	
 private:
 	vector<Player>& UserArray;
 	Manager manager;
+	void Show();
+	void OnEvent();
+    bool CheckAccount( Edit* UserName, Edit* UserPIN);
 };
 
 #endif // !MYLOGIN_H

@@ -130,9 +130,6 @@
     <ClCompile Include="codebird\bird.cpp" />
     <ClCompile Include="codebird\birdgame.cpp" />
     <ClCompile Include="codebird\birdsource.cpp" />
-    <ClCompile Include="codebird\file.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="codemain\main.cpp" />
     <ClCompile Include="codemain\mymanager.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -152,9 +149,6 @@
     <ClCompile Include="codeplane\plane_lep.cpp" />
     <ClCompile Include="codeplane\plane_mep.cpp" />
     <ClCompile Include="codeplane\plane_mp.cpp" />
-    <ClCompile Include="codebird\student.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="codebird\birdpillar.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +178,9 @@
     <ClInclude Include="codeplane\planebase.h" />
     <ClInclude Include="codeplane\planegame.h" />
     <ClInclude Include="codeplane\planesource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
